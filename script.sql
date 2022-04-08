@@ -17,16 +17,16 @@ SELECT id AS titanic_id FROM peliculas WHERE pelicula = 'Titanic';
 SELECT actor AS actores_titanic FROM reparto WHERE pelicula_fk = 2;
 
 -- 5. Consultar en cuántas películas del top 100 participa Harrison Ford.
-
+SELECT COUNT(pelicula_fk) AS cantidad_peliculas_harrison FROM reparto WHERE actor = 'Harrison Ford';
 
 
 -- 6. Indicar las películas estrenadas entre los años 1990 y 1999 ordenadas por título de
 -- manera ascendente.
-
+SELECT pelicula, year_estreno FROM peliculas WHERE year_estreno BETWEEN 1990 AND 1999 ORDER BY pelicula ASC;
 
 -- 7. Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser
 -- nombrado para la consulta como “longitud_titulo”.
-
+SELECT pelicula, LENGTH(pelicula) AS longitud_titulo FROM peliculas;
 
 -- 8. Consultar cual es la longitud más grande entre todos los títulos de las películas.
-
+SELECT MAX(LENGTH(pelicula)) FROM peliculas;
