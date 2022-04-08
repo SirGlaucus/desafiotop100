@@ -19,7 +19,6 @@ SELECT actor AS actores_titanic FROM reparto WHERE pelicula_fk = 2;
 -- 5. Consultar en cuántas películas del top 100 participa Harrison Ford.
 SELECT COUNT(pelicula_fk) AS cantidad_peliculas_harrison FROM reparto WHERE actor = 'Harrison Ford';
 
-
 -- 6. Indicar las películas estrenadas entre los años 1990 y 1999 ordenadas por título de
 -- manera ascendente.
 SELECT pelicula, year_estreno FROM peliculas WHERE year_estreno BETWEEN 1990 AND 1999 ORDER BY pelicula ASC;
