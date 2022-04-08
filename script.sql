@@ -14,10 +14,10 @@ CREATE TABLE reparto (pelicula_fk INT, actor VARCHAR(125), FOREIGN KEY (pelicula
 SELECT id AS titanic_id FROM peliculas WHERE titulo_pelicula = 'Titanic';
 
 -- 4. Listar a todos los actores que aparecen en la película "Titanic".
-SELECT actor AS actores_titanic FROM reparto WHERE pelicula_fk = 2;
+SELECT actor AS actores_titanic FROM reparto WHERE pelicula_fk = 2; -- NOTA: El "AS actores_titanic" deberia ser "AS actores_peliculas" para que se pueda reutilizar
 
 -- 5. Consultar en cuántas películas del top 100 participa Harrison Ford.
-SELECT COUNT(pelicula_fk) AS cantidad_peliculas_harrison FROM reparto WHERE actor = 'Harrison Ford';
+SELECT COUNT(pelicula_fk) AS cantidad_peliculas_harrison FROM reparto WHERE actor = 'Harrison Ford'; -- NOTA: Lo mismo que la nota del punto 4.
 
 -- 6. Indicar las películas estrenadas entre los años 1990 y 1999 ordenadas por título de
 -- manera ascendente.
