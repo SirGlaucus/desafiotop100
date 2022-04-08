@@ -1,6 +1,6 @@
 -- 1. Crear base de datos llamada películas.
-CREATE DATABASE peliculas;
-\c peliculas;
+CREATE DATABASE peliculas_db;
+\c peliculas_db;
 
 -- 1.5. Crear las tablas
 CREATE TABLE peliculas (id INT PRIMARY KEY, titulo_pelicula VARCHAR(125), year_estreno INT, director VARCHAR(125));
@@ -25,7 +25,7 @@ SELECT titulo_pelicula, year_estreno FROM peliculas WHERE year_estreno BETWEEN 1
 
 -- 7. Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser
 -- nombrado para la consulta como “longitud_titulo”.
-SELECT titulo_pelicula, LENGTH(titulo_pelicula) AS longitud_titulo FROM peliculas;
+SELECT titulo_pelicula, LENGTH(titulo_pelicula) AS longitud_titulo FROM peliculas ORDER BY LENGTH(titulo_pelicula) ASC;
 
 -- 8. Consultar cual es la longitud más grande entre todos los títulos de las películas.
 SELECT MAX(LENGTH(titulo_pelicula)) FROM peliculas;
